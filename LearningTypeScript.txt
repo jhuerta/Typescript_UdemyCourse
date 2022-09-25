@@ -1,0 +1,99 @@
+function add(add1:number, add:number)
+{
+    return add1 + add2:
+}
+
+const elementId = blablabla as HTMLInputElement
+
+
+Function declaration
+=====================
+    function add(add1: number, add2: number): number {
+        return add1 + add2;
+    }
+
+    // Inferred type, preferred method
+    function add(add1: number, add2: number) {
+        return add1 + add2;
+    }
+
+    // Void type
+    function logMessage(st: string, msg: string): void {
+        console.log(msg + " : " + st);
+    }
+
+Result conversion
+===================
+    return +myVariable;
+    return parseFloat(myVariable);
+    return parseInt(myVariable);
+    return myVariable.toString();
+
+
+Core Types
+==============
+    - number (1, 5.3, -10)
+    - string ('Hola', "Hello", `Hello`)
+    - boolean (true, false)
+    - object: 
+            type Person = {
+                name: string;
+                age: number;
+            };
+            const juan: Person = {
+                name: "Juan",
+                age: 44,
+            };
+    - array:
+        any[]
+        string[]
+        number[]
+    - tuple: (fixed length arrays)
+        const role: [number, string] ==> This is an special array where the first element is a number and the second an string
+        const mytpe: [typeA, typeB, typeC]
+    - enum
+        enum Color {RED, BLUE, GREEN}; (0,1,2)
+        enum Color {RED=5, BLUE=10, GREEN=22};
+        enum Color {RED='Red', BLUE='Blue', GREEN='Green'};
+    - any
+    - union
+        let computation: string | number;
+        type numberOrString = string | number;
+        let people: numberOrString[] = [];
+
+        let gen: (string | number)[] = [];
+    - literal type: restricting the values
+        let oddNumbers: 1 | 3| 5 | 7 = 1;
+        let evenNumbers: "two" | "four" | "six" | "eight" = "two";
+    - type alias
+        type MyXustomType = number | string;
+        type MyXustomType = {
+            Name: string;
+            Age: number;
+        };
+    - Function
+        function add(n1,n2){
+            return n1+n2;
+        }
+        let suma:Function = add;
+        console.log(suma(1,2));
+
+        Specifying function type:
+        let suma: (a: number, b: number) => number;
+        suma = add;
+
+        Specifying function type:
+        let suma: (a: number, b: number, cb: (num: number) => number) => number;
+        suma = add;
+    - uknown
+        let someValue:uknown;
+        someValue = 5;
+        someValue = "Juan";
+        // Preferred than type 'any'
+    - never
+        function errorThrower():never{
+            throw {message:"Something", code: 500}
+        }
+        // Used when we know that function wont ever finish properly
+        // throw exception or infinity loop
+
