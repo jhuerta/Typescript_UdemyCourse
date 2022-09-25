@@ -5,6 +5,13 @@ function add(add1:number, add:number)
 
 const elementId = blablabla as HTMLInputElement
 
+Tips
+===========
+    => Monitor a file changes and compile automatically
+        - Option 1 (per file): tsc fileName --watch
+        - For a ful project:
+            1) tsc --init (one time)
+            2) t
 
 Function declaration
 =====================

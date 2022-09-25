@@ -75,7 +75,7 @@ function logMessage(st: string, msg: string): void {
   console.log(msg + " : " + st);
 }
 
-function add(n1, n2) {
+function add(n1: number, n2: number) {
   return n1 + n2;
 }
 let suma: (a: number, b: number) => number;
@@ -84,7 +84,7 @@ console.log("suma(1, 2)");
 console.log(suma(1, 2));
 
 function notreturn(): never {
-  throw{message:"Message"};
+  throw { message: "Message" };
 }
 
 export {};
